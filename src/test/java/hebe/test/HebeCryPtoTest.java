@@ -4,6 +4,7 @@ package hebe.test;
 import hebe.http.SignTransactionProcesses;
 import hebe.crypto.Crypto;
 import hebe.crypto.EncryptedData;
+import hebe.util.Bip44Utils;
 import hebe.util.Convert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -94,5 +95,10 @@ public class HebeCryPtoTest {
         System.out.println(s);
     }
 
+    @Test
+    public void getSecretPhrase()throws Exception{
+        String strings = Bip44Utils.generateMnemonicWords();
+        System.out.println(strings);
+    }
 
 }
